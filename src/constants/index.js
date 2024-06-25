@@ -63,7 +63,7 @@ export const PROJECTS = [
     {
         title: "Portfolio Website",
         img: Portimg,
-        description: "A Personal Portfolio website showcasing projects, skills and experience",
-        technologies: ["React.Js, TailwindCSS, HTML, CSS"]
+        description: "A Personal Portfolio website showcasing my projects, skill set and experience",
+        technologies: ["React.Js", "TailwindCSS", "HTML", "CSS"]
     }
 ];

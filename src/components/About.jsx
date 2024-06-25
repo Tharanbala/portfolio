@@ -23,7 +23,7 @@ const About = () => {
                 </div>
             </div>
             <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
-                <div className='sm:text-right text-4xl font-bold'>
+                <div className='sm:text-right font-bold'>
                     <motion.p variants={container(0)} initial="hidden" animate="visible" className='text-2xl py-4'><span className='text-yellow-300'>Phone number: </span>(414) 243-5462</motion.p>
                     <motion.p variants={container(0)} initial="hidden" animate="visible" className='text-2xl py-4'><span className='text-yellow-300'>Email: </span> tharanbala33@gmail.com</motion.p>
                     <motion.p variants={container(0)} initial="hidden" animate="visible" className='text-2xl py-4'><span className='text-yellow-300'>Address: </span> Milwaukee, WI</motion.p>

@@ -24,7 +24,7 @@ const Skills = () => {
     <div name='skills' className='w-full h-screen bg-[#1E1E1E] text-gray-300'>
         {/* Container */}
         <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
-            <div className='pb-8'>
+            <div>
                 <p className='text-4xl font-bold inline border-b-4 border-yellow-300 '>Skills</p>
                 <p className='py-4'>Below are the technologies I've worked with</p>
             </div>
@@ -35,7 +35,7 @@ const Skills = () => {
                 </motion.div>
                 <motion.div variants={container(0)} initial="hidden" animate="visible"  className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto bg-white'src={Flask} alt='Flask'/>
-                    <p className='my-7'>FLASK</p>
+                    <p className='my-4'>FLASK</p>
                 </motion.div>
                 <motion.div initial={{x:100, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:0.5, delay:0}} className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                     <img className='w-20 mx-auto'src={ReactImg} alt='ReactImg'/>
