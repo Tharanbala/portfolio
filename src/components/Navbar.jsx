@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#1E1E1E] text-gray-300'>
         <div className='flex justify-between items-center'>
             <Link to="home" smooth={true} duration={500}>
-                <img className='cursor-pointer' src={logo} alt='logo' style={{width: '50px'}}/>
+                <img className='cursor-pointer' src={logo} alt='Tharan Bala' style={{width: '50px'}}/>
             </Link>
             <p className='mx-4 text-white font-bold'>TB PORTFOLIO</p>
         </div>

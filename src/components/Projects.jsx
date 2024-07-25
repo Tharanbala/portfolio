@@ -22,7 +22,7 @@ const Projects = () => {
                 {PROJECTS.map((project, index) => (
                     <div key={index} className='mb-8 flex flex-wrap lg:justify-center'>
                         <div className='w-full lg:w-1/4'>
-                            <a href={project.link}><motion.img variants={container(0)} initial="hidden" animate="visible" src={project.img} width={150} alt={project.title} className='rounded cursor-pointer'/></a>
+                            <a href={project.link}><motion.img variants={container(0)} initial="hidden" animate="visible" src={project.img} width={150} alt="Tharan Bala" className='rounded cursor-pointer'/></a>
                         </div> 
                         <div className='w-full max-w-xl lg:w-3/4'>
                             <motion.h6 initial={{x:100, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:0.5, delay:0}} className='mb-2 font-semibold'>{project.title}</motion.h6>

@@ -30,35 +30,35 @@ const Skills = () => {
             </div>
             <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
                 <motion.div variants={container(0)} initial="hidden" animate="visible" className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto'src={Django} alt='Django'/>
+                    <img className='w-20 mx-auto'src={Django} alt='Tharan Bala'/>
                     <p className='my-4'>DJANGO</p>
                 </motion.div>
                 <motion.div variants={container(0)} initial="hidden" animate="visible"  className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto bg-white'src={Flask} alt='Flask'/>
+                    <img className='w-20 mx-auto bg-white'src={Flask} alt='Tharan Bala'/>
                     <p className='my-4'>FLASK</p>
                 </motion.div>
                 <motion.div initial={{x:100, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:0.5, delay:0}} className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto'src={ReactImg} alt='ReactImg'/>
+                    <img className='w-20 mx-auto'src={ReactImg} alt='Tharan Bala'/>
                     <p className='my-4'>REACT</p>
                 </motion.div>
                 <motion.div initial={{x:100, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:0.5, delay:0}} className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto'src={Typescript} alt='Typescript'/>
+                    <img className='w-20 mx-auto'src={Typescript} alt='Tharan Bala'/>
                     <p className='my-4'>TYPESCRIPT</p>
                 </motion.div>
                 <motion.div variants={container(0)} initial="hidden" animate="visible"  className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto'src={Tailwind} alt='Tailwind'/>
+                    <img className='w-20 mx-auto'src={Tailwind} alt='Tharan Bala'/>
                     <p className='my-4'>TAILWIND</p>
                 </motion.div>
                 <motion.div variants={container(0)} initial="hidden" animate="visible"  className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto'src={JavaScript} alt='JavaScript'/>
+                    <img className='w-20 mx-auto'src={JavaScript} alt='Tharan Bala'/>
                     <p className='my-4'>JAVASCRIPT</p>
                 </motion.div>
                 <motion.div initial={{x:100, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:0.5, delay:0}} className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto'src={HTML} alt='html'/>
+                    <img className='w-20 mx-auto'src={HTML} alt='Tharan Bala'/>
                     <p className='my-4'>HTML</p>
                 </motion.div>
                 <motion.div initial={{x:100, opacity:0}} animate={{x:0, opacity:1}} transition={{duration:0.5, delay:0}} className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto'src={GitHub} alt='GitHub'/>
+                    <img className='w-20 mx-auto'src={GitHub} alt='Tharan Bala'/>
                     <p className='my-4'>GITHUB</p>
                 </motion.div>
             </div>
