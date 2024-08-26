@@ -2,6 +2,13 @@ import HDimg from '../assets/HDimg.png'
 import Portimg from '../assets/Portimg.png'
 
 export const EXPERIENCE = [
+    {
+        year: "Jun2024 - Sep2024",
+        role: "Software Engineering Fellowship",
+        company: "Headstarter AI",
+        description: "Built 5+ AI apps and APIs using NextJs, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users. Developed projects from desgin to deployment leading 4+ engineering fellows using MVC design patterns. Coached by Amazon, Bloomberg and Capitol One engineers on Agile, CI/CD, Git and microservices patterns.",
+        technologies: ["NextJs, Typescript, MaterialUI, Django, OpenAI, Pinecone, Clerk, StripeAPI, Vercel, AWS"]
+    },
     { 
         year: "Feb2023 - May2024",
         role: "IT Help Desk Supervisor",
@@ -55,11 +62,39 @@ export const EXPERIENCE = [
 
 export const PROJECTS = [
     {
+        title: "RateMyProfessor",
+        img: HDimg,
+        link: 'https://github.com/Tharanbala/Professor-Rater',
+        description: "Built the Help Desk chatbot, an application used as one of the methods of contact for the UWM IT Help Desk with Django, Rasa framework and using React.js, Typescript, MySQL hosted on AWS",
+        technologies: ["Next.js", "Typescript", "TailwindCSS", "MaterialUI", "OpenAI", "Pinecone", "Vercel"]
+    },
+    {
+        title: "FlashMind AI",
+        img: HDimg,
+        link: 'https://github.com/Tharanbala/AI-Flashcard',
+        description: "FlashMind AI is a user-friendly platform that transforms your notes into intelligent, concise flashcards, optimized for effective studying. With effortless content creation, AI-driven study aids, and universal access across all your devices, studying has never been easier or more convenient.",
+        technologies: ["NextJS", "Typescript", "TailwindCSS", "MaterialUI", "OpenAI", "Vercel", "Firebase"]
+    },
+    {
+        title: "AI Chatbot",
+        img: HDimg,
+        link: 'https://github.com/Tharanbala/AI-chatbot',
+        description: "An AI Chatbot application leveraging OpenAI's API for chat completion, Pinecone for real-time vector search, Next.js for the frontend, and Flask for backend API endpoints. The application is deployed on Vercel, offering a seamless and scalable platform for interactive user communication.",
+        technologies: ["NextJS", "Typescript", "MaterialUI", "Flask", "OpenAI", "Pinecone", "Vercel"]
+    },
+    {
+        title: "AI Pantry Management App",
+        img: HDimg,
+        link: 'https://github.com/Tharanbala/Pantry-app',
+        description: "A Pantry Management app using Next.js, TailwindCSS, and Material UI for the user interface, integrated with Firebase for backend services. The app utilizes the OpenAI API to enable users to chat with images, providing a unique and interactive way to manage pantry items.",
+        technologies: ["NextJs", "Typescript", "MaterialUI", "OpenAI", "Firebase"]
+    },
+    {
         title: "UWM Help Desk Chatbot",
         img: HDimg,
         link: 'https://github.com/Tharanbala/HelpDeskChatbot',
         description: "Built the Help Desk chatbot, an application used as one of the methods of contact for the UWM IT Help Desk with Django, Rasa framework and using React.js, Typescript, MySQL hosted on AWS",
-        technologies: ["Django", "React.js", "Next.js", "Typescript", "TailwindCSS", "RASA", "MySQL"]
+        technologies: ["Django", "NextJS", "Typescript", "TailwindCSS", "RASA"]
     },
     {
         title: "Portfolio Website",
