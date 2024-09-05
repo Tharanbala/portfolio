@@ -7,7 +7,7 @@ export const EXPERIENCE = [
         role: "Software Engineering Fellowship",
         company: "Headstarter AI",
         description: "Built 5+ AI apps and APIs using NextJs, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users. Developed projects from desgin to deployment leading 4+ engineering fellows using MVC design patterns. Coached by Amazon, Bloomberg and Capitol One engineers on Agile, CI/CD, Git and microservices patterns.",
-        technologies: ["NextJs, Typescript, MaterialUI, Django, OpenAI, Pinecone, Clerk, StripeAPI, Vercel, AWS"]
+        technologies: ["NextJs", "Typescript", "MaterialUI", "Django", "OpenAI", "Pinecone", "Clerk", "StripeAPI", "Vercel", "AWS"]
     },
     { 
         year: "Feb2023 - May2024",
@@ -39,14 +39,14 @@ export const EXPERIENCE = [
     },
     {
         year: "Feb2021 - May2021",
-        role: "Frontend Developer",
+        role: "Data Engineer",
         company: "Payoda Technologies - Smart Call Center",
-        description: " Designed an application deploying Flask, Vue.js, and NLP to assist Customer Care in handling customers with ease for Verizon, resulting in a Proof of Concept (POC) project for the company",
-        technologies: ["Flask", "Vue.js", "NLP", "AWS EC2"]
+        description: " Pipelined ETL using SQL and Matillion for processing large datasets, improving data accessibility and efficiency by 25%. Built dashboards using PowerBI and integrated Snowflake as primary data warehouse for cross-departmental data consumption. Transformed and validated data using DBT for consistency and reliability across pipelines. Automated using Azure DevOps for streamlined development process and improving collaboration",
+        technologies: ["Microsoft SQL", "DBT", "Snowflake", "Matillion", "Azure"]
     },
     {
         year: "Feb2020 - Feb2021",
-        role: "Software Developer I",
+        role: "Backend Developer",
         company: "Payoda Technologies - myTheo (Real estate application)",
         description: "Designed features for myTheo, a Real Estate Client with agencies across the USA and headquarters in California, incorporating Ruby on Rails, HAML, and Google Street View, increasing the company's sales by 20%",
         technologies: ["Ruby on Rails", "HAML", "SCSS", "Google Street View", "PostgreSQL"]
