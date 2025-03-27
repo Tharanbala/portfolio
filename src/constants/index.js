@@ -2,62 +2,101 @@ import HDimg from '../assets/HDimg.png'
 import Portimg from '../assets/Portimg.png'
 
 export const EXPERIENCE = [
-    {
-        year: "Jun2024 - Sep2024",
-        role: "Software Engineering Fellowship",
-        company: "Headstarter AI",
-        description: "Built 5+ AI apps and APIs using NextJs, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users. Developed projects from desgin to deployment leading 4+ engineering fellows using MVC design patterns. Coached by Amazon, Bloomberg and Capitol One engineers on Agile, CI/CD, Git and microservices patterns.",
-        technologies: ["NextJs", "Typescript", "MaterialUI", "Django", "OpenAI", "Pinecone", "Clerk", "StripeAPI", "Vercel", "AWS"]
-    },
-    { 
-        year: "Feb2023 - May2024",
-        role: "IT Help Desk Supervisor",
-        company: "Univeristy of Wisconsin Milwaukee",
-        description: "Promoted to Supervisor from consultant in 3 months. Oversaw the efficient operation of the Help Desk",
-        technologies: ["Microsoft Teams", "Microsoft Excel", "Microsoft Azure"]
-    },
-    {
-        year: "Jun2023 - Aug2023",
-        role: "Full stack Web Developer Intern",
-        company: "Seminaut Inc",
-        description: "Utilized Flask framework to create REST APIs and React.js, Typescript to develop reusable models for a webpage of the company's website, while engaging with fellow interns and maintaining code synchronization through Git version control",
-        technologies: ["Flask", "React.js", "Typescript", "TailwindCSS"]
-    },
-    {
-        year: "Oct2022 - Feb2023",
-        role: "IT Help Desk Consultant",
-        company: "Univeristy of Wisconsin Milwaukee",
-        description: "Provided prompt and professional IT support to students, faculty, and staff, addressing a wide range of technical issues and inquiries related to software, hardware, networking, and university systems. Demonstrated strong problem-solving abilities by troubleshooting and resolving complex technical problems, minimizing downtime and ensuring efficient operations",
-        technologies: ["Microsoft Teams", "Microsoft Excel", "Microsoft Azure"]
-    },
-    {
-        year: "May2021 - Feb2022",
-        role: "Full stack Developer (AI)",
-        company: "Payoda Technologies - Cloth Prediction system",
-        description: "Created a Flask and React.js based dashboard to predict cloth stitch type, stitch pattern, hosted the application on AWS, securing a Proof of Concept (POC) project for the company",
-        technologies: ["Flask", "React.js", "MySQL", "CNN", "AWS EC2"]
-    },
-    {
-        year: "Feb2021 - May2021",
-        role: "Data Engineer",
-        company: "Payoda Technologies - Smart Call Center",
-        description: " Pipelined ETL using SQL and Matillion for processing large datasets, improving data accessibility and efficiency by 25%. Built dashboards using PowerBI and integrated Snowflake as primary data warehouse for cross-departmental data consumption. Transformed and validated data using DBT for consistency and reliability across pipelines. Automated using Azure DevOps for streamlined development process and improving collaboration",
-        technologies: ["Microsoft SQL", "DBT", "Snowflake", "Matillion", "Azure"]
-    },
-    {
-        year: "Feb2020 - Feb2021",
-        role: "Backend Developer",
-        company: "Payoda Technologies - myTheo (Real estate application)",
-        description: "Designed features for myTheo, a Real Estate Client with agencies across the USA and headquarters in California, incorporating Ruby on Rails, HAML, and Google Street View, increasing the company's sales by 20%",
-        technologies: ["Ruby on Rails", "HAML", "SCSS", "Google Street View", "PostgreSQL"]
-    },
-    {
-        year: "Aug2019 - Feb2020",
-        role: "Software Developer Intern",
-        company: "Payoda Technologies - Alternative Soft",
-        description: "Developed portfolio construction software, processes for institutional investors, utilizing technologies such as .NET, React.js, micro services, and SQL, resulting in a 40% increase in clientele",
-        technologies: [".NET", "React.js", "SQL", "Microservices", "AWS"]
-    }
+  {
+    year: "Sep2024 - Present",
+    role: "Software Engineer",
+    company: "eCUEity LLC Inc",
+    description:
+      "Maintained automation workflows with Celery, resolved critical Django/JavaScript bugs, and leveraged Docker to streamline deployments and enhance scalability.",
+    technologies: ["Django", "React.js", "Celery", "PostgreSQL", "Docker"],
+  },
+  {
+    year: "Jun2024 - Sep2024",
+    role: "Software Engineering Fellowship",
+    company: "Headstarter AI",
+    description:
+      "Built 5+ AI apps and APIs using NextJs, OpenAI, Pinecone, StripeAPI with 98% accuracy as seen by 1000 users. Developed projects from desgin to deployment leading 4+ engineering fellows using MVC design patterns. Coached by Amazon, Bloomberg and Capitol One engineers on Agile, CI/CD, Git and microservices patterns.",
+    technologies: [
+      "NextJs",
+      "Typescript",
+      "MaterialUI",
+      "Django",
+      "OpenAI",
+      "Pinecone",
+      "Clerk",
+      "StripeAPI",
+      "Vercel",
+      "AWS",
+    ],
+  },
+  {
+    year: "Feb2023 - May2024",
+    role: "IT Help Desk Supervisor",
+    company: "Univeristy of Wisconsin Milwaukee",
+    description:
+      "Promoted to Supervisor from consultant in 3 months. Oversaw the efficient operation of the Help Desk",
+    technologies: ["Microsoft Teams", "Microsoft Excel", "Microsoft Azure"],
+  },
+  {
+    year: "Jun2023 - Aug2023",
+    role: "Full stack Web Developer Intern",
+    company: "Seminaut Inc",
+    description:
+      "Utilized Flask framework to create REST APIs and React.js, Typescript to develop reusable models for a webpage of the company's website, while engaging with fellow interns and maintaining code synchronization through Git version control",
+    technologies: ["Flask", "React.js", "Typescript", "TailwindCSS"],
+  },
+  {
+    year: "Oct2022 - Feb2023",
+    role: "IT Help Desk Consultant",
+    company: "Univeristy of Wisconsin Milwaukee",
+    description:
+      "Provided prompt and professional IT support to students, faculty, and staff, addressing a wide range of technical issues and inquiries related to software, hardware, networking, and university systems. Demonstrated strong problem-solving abilities by troubleshooting and resolving complex technical problems, minimizing downtime and ensuring efficient operations",
+    technologies: ["Microsoft Teams", "Microsoft Excel", "Microsoft Azure"],
+  },
+  {
+    year: "May2021 - Feb2022",
+    role: "Full stack Developer (AI)",
+    company: "Payoda Technologies - Cloth Prediction system",
+    description:
+      "Created a Flask and React.js based dashboard to predict cloth stitch type, stitch pattern, hosted the application on AWS, securing a Proof of Concept (POC) project for the company",
+    technologies: ["Flask", "React.js", "MySQL", "CNN", "AWS EC2"],
+  },
+  {
+    year: "Feb2021 - May2021",
+    role: "Software Developer",
+    company: "Payoda Technologies - Smart Call Center",
+    description:
+      "Built a customer care efficiency app for Verizon using Flask, React.js, and NLP, integrating Google Speech-to-Text and sentiment analysis, resulting in a successful POC and optimized backend performance",
+    technologies: [
+      "Flask",
+      "React.js",
+      "NLP",
+      "Google STT",
+      "Sentiment Analysis",
+    ],
+  },
+  {
+    year: "Feb2020 - Feb2021",
+    role: "Backend Developer",
+    company: "Payoda Technologies - myTheo (Real estate application)",
+    description:
+      "Designed features for myTheo, a Real Estate Client with agencies across the USA and headquarters in California, incorporating Ruby on Rails, HAML, and Google Street View, increasing the company's sales by 20%",
+    technologies: [
+      "Ruby on Rails",
+      "HAML",
+      "SCSS",
+      "Google Street View",
+      "PostgreSQL",
+    ],
+  },
+  {
+    year: "Aug2019 - Feb2020",
+    role: "Software Developer Intern",
+    company: "Payoda Technologies - Alternative Soft",
+    description:
+      "Developed portfolio construction software, processes for institutional investors, utilizing technologies such as .NET, React.js, micro services, and SQL, resulting in a 40% increase in clientele",
+    technologies: [".NET", "React.js", "SQL", "Microservices", "AWS"],
+  },
 ];
 
 export const PROJECTS = [

@@ -39,7 +39,7 @@ const Navbar = () => {
                 </li>
                 <li className='mx-4'>
                     <Link to="work" smooth={true} duration={500}>
-                        Experience
+                        Experiences
                     </Link>
                 </li>
                 <li className='mx-4'>
