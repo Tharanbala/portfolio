@@ -1,123 +1,102 @@
-import React, {useState} from 'react'
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
-import {HiOutlineMail} from 'react-icons/hi'
-import {BsFillPersonLinesFill} from 'react-icons/bs'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import logo from '../assets/portfolio-logo.png'
-import resume from '../assets/resume.pdf'
-import {Link} from 'react-scroll'
+import { Link } from 'react-scroll'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
     const handleClick = () => setNav(!nav);
 
-  return (
-    <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#1E1E1E] text-gray-300'>
-        <div className='flex justify-between items-center'>
-            <Link to="home" smooth={true} duration={500}>
-                <img className='cursor-pointer' src={logo} alt='Tharan Bala' style={{width: '50px'}}/>
-            </Link>
-            <p className='mx-4 text-white font-bold'>TB PORTFOLIO</p>
-        </div>
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-        {/* menu */}
+  return (
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed w-full h-20 flex justify-between items-center px-4 sm:px-8 z-50 transition-all duration-300 ${
+        scrolled ? 'glass-dark shadow-lg' : 'bg-transparent'
+      }`}
+    >
+        <Link to="home" smooth={true} duration={500}>
+            <motion.div
+                className='flex items-center gap-3 cursor-pointer'
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+            >
+                <img className='w-12 h-12 rounded-full ring-2 ring-primary-500/50' src={logo} alt='Tharan Bala' />
+                <span className='text-white font-bold text-xl font-["Space_Grotesk"] hidden sm:block'>
+                    TB <span className='text-primary-500'>PORTFOLIO</span>
+                </span>
+            </motion.div>
+        </Link>
+
+        {/* Desktop menu */}
         <div className='hidden md:flex'>
-            <ul className='flex'>
-                <li className='mx-4'>
-                    <Link to="home" smooth={true} duration={500}>
-                        Home
-                    </Link>
-                </li>
-                <li className='mx-4'>
-                    <Link to="about" smooth={true} duration={500}>
-                        About
-                    </Link>
-                </li>
-                <li className='mx-4'>
-                    <Link to="skills" smooth={true} duration={500}>
-                        Skills
-                    </Link>
-                </li>
-                <li className='mx-4'>
-                    <Link to="work" smooth={true} duration={500}>
-                        Experiences
-                    </Link>
-                </li>
-                <li className='mx-4'>
-                    <Link to="projects" smooth={true} duration={500}>
-                        Projects
-                    </Link>
-                </li>
-                <li className='mx-4'>
-                    <Link to="contact" smooth={true} duration={500}>
-                        Contact
-                    </Link>
-                </li>
+            <ul className='flex items-center gap-1'>
+                {['home', 'about', 'skills', 'work', 'projects', 'contact'].map((item) => (
+                    <motion.li
+                        key={item}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        <Link to={item} smooth={true} duration={500}>
+                            <span className='px-4 py-2 text-gray-300 hover:text-primary-500 transition-colors duration-300 cursor-pointer capitalize font-medium'>
+                                {item === 'work' ? 'Experience' : item}
+                            </span>
+                        </Link>
+                    </motion.li>
+                ))}
             </ul>
         </div>
 
         {/* Hamburger */}
-        <div onClick={handleClick} className='md:hidden z-10'>
-            {!nav ? <FaBars/> : <FaTimes/>}
-        </div>
+        <motion.div
+            onClick={handleClick}
+            className='md:hidden z-50 cursor-pointer text-gray-300 hover:text-primary-500 transition-colors'
+            whileTap={{ scale: 0.9 }}
+        >
+            {!nav ? <FaBars size={24} /> : <FaTimes size={24} />}
+        </motion.div>
 
         {/* Mobile menu */}
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#1E1E1E] flex flex-col justify-center items-center'}>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="home" smooth={true} duration={500}>
-                    Home
-                </Link>
-            </li>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="about" smooth={true} duration={500}>
-                    About
-                </Link>
-            </li>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-                    Skills
-                </Link>
-            </li>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="work" smooth={true} duration={500}>
-                    Experience
-                </Link>
-            </li>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
-                    Projects
-                </Link>
-            </li>
-            <li className='py-6 text-4xl'>
-                <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
-                    Contact
-                </Link>
-            </li>
-        </ul>
-
-        {/* Social icons */}
-        <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
-            <ul>
-                <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-                    <a className='flex justify-between items-center w-full text-gray-300' href='https://www.linkedin.com/in/tharan-bala/'>LinkedIn <FaLinkedin size={30}/> </a>
-                </li>
-            </ul>
-            <ul>
-                <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-                    <a className='flex justify-between items-center w-full text-gray-300' href='https://github.com/Tharanbala'>GitHub <FaGithub size={30}/> </a>
-                </li>
-            </ul>
-            <ul>
-                <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#08851b]'>
-                    <a className='flex justify-between items-center w-full text-gray-300' href='mailto:tharanbala33@gmail.com'>Email <HiOutlineMail size={30}/> </a>
-                </li>
-            </ul>
-            <ul>
-                <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#3d3d3d]'>
-                    <a className='flex justify-between items-center w-full text-gray-300' href={resume} download='Tharan_Bala_resume.pdf'>Resume <BsFillPersonLinesFill size={30}/> </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+        <AnimatePresence>
+            {nav && (
+                <motion.div
+                    initial={{ opacity: 0, x: '100%' }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: '100%' }}
+                    transition={{ duration: 0.3 }}
+                    className='absolute top-0 left-0 w-full h-screen glass-dark flex flex-col justify-center items-center md:hidden'
+                >
+                    {['home', 'about', 'skills', 'work', 'projects', 'contact'].map((item, index) => (
+                        <motion.div
+                            key={item}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            className='py-6'
+                        >
+                            <Link onClick={handleClick} to={item} smooth={true} duration={500}>
+                                <span className='text-3xl text-gray-300 hover:text-primary-500 transition-colors cursor-pointer capitalize font-medium'>
+                                    {item === 'work' ? 'Experience' : item}
+                                </span>
+                            </Link>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            )}
+        </AnimatePresence>
+    </motion.nav>
   )
 }
 
